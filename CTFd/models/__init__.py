@@ -84,6 +84,7 @@ class Pages(db.Model):
     draft = db.Column(db.Boolean)
     hidden = db.Column(db.Boolean)
     auth_required = db.Column(db.Boolean)
+    title_page = db.Column(db.Boolean)
     format = db.Column(db.String(80), default="markdown")
     link_target = db.Column(db.String(80), nullable=True)
 

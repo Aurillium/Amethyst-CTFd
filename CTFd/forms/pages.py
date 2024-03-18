@@ -22,6 +22,7 @@ class PageEditForm(BaseForm):
     draft = BooleanField("Draft")
     hidden = BooleanField("Hidden")
     auth_required = BooleanField("Authentication Required")
+    title_page = BooleanField("Title")
     content = TextAreaField("Content")
     format = SelectField(
         "Format",

@@ -124,6 +124,12 @@
 											{{ form.auth_required(class="form-check-input", checked=auth_required) }}
 											{{ form.auth_required.label(class="form-check-label") }}
 										</div>
+										
+										<div class="form-group pr-3">
+											{% set title_page = page is defined and page.title_page == True %}
+											{{ form.title_page(class="form-check-input", checked=title_page) }}
+											{{ form.title_page.label(class="form-check-label") }}
+										</div>
 									</div>
 
 									<br>

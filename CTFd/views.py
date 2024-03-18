@@ -385,6 +385,16 @@ def settings():
     )
 
 
+#@views.route("/")
+#@views.route("/index")
+def index(route):
+    # Don't check for auth; shouldn't need it for index
+    # Uses a slightly fancier 'title' page template
+    page = get_page(route)
+    if page is None:
+        abort(404)
+    return render_template("index.html", content=page.html, title=page.title)
+
 @views.route("/", defaults={"route": "index"})
 @views.route("/<path:route>")
 def static_html(route):
@@ -400,8 +410,10 @@ def static_html(route):
         if page.auth_required and authed() is False:
             return redirect(url_for("auth.login", next=request.full_path))
 
-        return render_template("page.html", content=page.html, title=page.title)
-
+        if page.title_page:
+            return render_template("title.html", content=page.html, title=page.title)
+        else:
+            return render_template("page.html", content=page.html, title=page.title)
 
 @views.route("/tos")
 def tos():
