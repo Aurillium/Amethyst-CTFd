@@ -8,12 +8,12 @@
 
 @use "~/@fontsource/lato/scss/mixins" as Lato;
 @use "~/@fontsource/raleway/scss/mixins" as Raleway;
+@use "~/@fontsource/sixtyfour/scss/mixins" as SixtyFour;
 
 // Include both normal and bold weights
-@include Lato.fontFace($fontDir: "../webfonts", $weight: 400);
-@include Lato.fontFace($fontDir: "../webfonts", $weight: 700);
-
-@include Raleway.fontFace($fontDir: "../webfonts");
+@include Lato.faces($directory: "../webfonts", $weights: (400, 700));
+@include Raleway.faces($directory: "../webfonts");
+@include SixtyFour.faces($directory: "../webfonts");
 
 $fa-font-path: "../webfonts";
 @import "~/@fortawesome/fontawesome-free/scss/fontawesome.scss";
@@ -31,4 +31,8 @@ body,
 
 .jumbotron .container {
   font-family: "Raleway", sans-serif;
+}
+
+.title-header > .title {
+  font-family: "SixtyFour", sans-serif;
 }

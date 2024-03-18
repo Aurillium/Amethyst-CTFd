@@ -36,6 +36,10 @@ export default defineConfig({
               dest: "static/webfonts",
             },
             {
+              src: "./node_modules/@fontsource/sixtyfour/files/**/*400*-normal*",
+              dest: "static/webfonts",
+            },
+            {
               src: "./assets/img/**",
               dest: "static/img",
             },
