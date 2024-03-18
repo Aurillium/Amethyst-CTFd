@@ -3,6 +3,8 @@
 #### WARNING: Do not clone this repo to create your own CTFd instance
 This repo was designed to cater specifically to my use case, and while some code may be of value to you, it was not designed to be used elsewhere and may stop being updated at any time. If you want to create your own version of CTFd, please clone it from their repo.
 
+## Original README follows:
+
 # ![](https://github.com/CTFd/CTFd/blob/master/CTFd/themes/core/static/img/logo.png?raw=true)
 
 ![CTFd MySQL CI](https://github.com/CTFd/CTFd/workflows/CTFd%20MySQL%20CI/badge.svg?branch=master)
